@@ -36,14 +36,13 @@ class ViewController: UIViewController, WKNavigationDelegate {
         } else {
             navigationItem.setRightBarButton(nil, animated: true)
         }
- 
- 
+        
+        title = webView.title
+        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = "Hacking with Swift"
         
         let url = URL(string: "https://www.hackingwithswift.com")!
         webView.load(URLRequest(url: url))
